@@ -1,0 +1,9 @@
+name: MurderMystery
+description: A simple murder mystery minigame.
+main: me.repayed.murdermystery.MurderMystery
+version: 1.0-SNAPSHOT
+author: Repayed
+commands:
+  murdermystery:
+    usage: /murdermystery
+    description: The main command for murder mystery.

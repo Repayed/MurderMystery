@@ -1,0 +1,15 @@
+database:
+  username: "type-here"
+  password: "type-here"
+  host: "type-here"
+
+permissions:
+  user:
+    check-profile: "murdermystery.profile"
+  admin:
+    start-game: "murdermystery.start"
+    end-game: "murdermystery.end"
+
+messages:
+  prefix: "&4&lMurder&c&lMystery &8┃"
+  no-permission: "%prefix% &fYou don't have the required permission for this command."
