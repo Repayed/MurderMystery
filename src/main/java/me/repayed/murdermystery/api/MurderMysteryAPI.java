@@ -1,13 +1,17 @@
 package me.repayed.murdermystery.api;
 
+import me.repayed.murdermystery.game.Game;
 import me.repayed.murdermystery.player.GamePlayer;
 
-import java.util.Collection;
+import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 public interface MurderMysteryAPI {
 
-    Collection<GamePlayer> getGamePlayers();
+    Game getGame();
 
-    GamePlayer getGamePlayerByUUID(UUID uuid);
+    Set<GamePlayer> getGamePlayers();
+
+    Optional<GamePlayer> getGamePlayerByUUID(UUID uuid);
 }

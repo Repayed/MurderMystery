@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class GamePlayer {
 
-    enum Role {
+    public enum Role {
         INVALID,
         SURVIVOR,
         DETECTIVE,

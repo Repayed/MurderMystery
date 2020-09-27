@@ -2,14 +2,36 @@ database:
   username: "type-here"
   password: "type-here"
   host: "type-here"
+  port: 12345
 
 permissions:
   user:
     check-profile: "murdermystery.profile"
   admin:
-    start-game: "murdermystery.start"
-    end-game: "murdermystery.end"
+    command-menu: "murdermystery.commandmenu"
+    force-start-game: "murdermystery.start"
+    force-end-game: "murdermystery.end"
 
 messages:
   prefix: "&4&lMurder&c&lMystery &8┃"
   no-permission: "%prefix% &fYou don't have the required permission for this command."
+  default-admin:
+    set-lobby-location: "%prefix% &fYou have set the &b&lLOBBY SPAWN LOCATION&f."
+    set-game-location: "%prefix% &fYou have set the &a&lGAME SPAWN LOCATION&f."
+    force-started-game: "%prefix% &a%starter%&f manually started the game."
+    force-ended-game: "%prefix% &c%ender%&f manually ended the game."
+    command-menu:
+      - ""
+      - " &4&lMurder&c&lMystery &f(Developer -> Repayed#6257)"
+      - "   &7Shows a list of the useful commands."
+      - ""
+      - " &4&l* &c/murdermystery profile (player) &7Shows the profile of the player."
+      - " &4&l* &c/murdermystery start &fManually force starts the game."
+      - " &4&l* &c/murdermystery end &fEnds the current game."
+      - ""
+  game:
+    game-started: "%prefix% &fThe game has &a&lSTARTED&f."
+    game-ended: "%prefix% &fThe game has &c&lENDED&f."
+    not-enough-players: "%prefix% &cThere aren't enough players to start the game."
+    player-murdered: " &8-> &c&lNEW BODY! &7A new body has been seen by the cameras."
+
