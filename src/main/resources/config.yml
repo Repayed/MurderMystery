@@ -34,4 +34,7 @@ messages:
     game-ended: "%prefix% &fThe game has &c&lENDED&f."
     not-enough-players: "%prefix% &cThere aren't enough players to start the game."
     player-murdered: " &8-> &c&lNEW BODY! &7A new body has been seen by the cameras."
+  connection:
+    player-joined: "%prefix% &c%player% &fjoined the game. &c[%current-player-count%/%max-player-count%]"
+    played-disconnected: "%prefix% &c%player% &fhas left the game. &c[%current-player-count%/%max-player-count%]"
 

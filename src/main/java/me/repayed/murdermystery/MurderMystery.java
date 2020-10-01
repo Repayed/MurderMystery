@@ -18,12 +18,13 @@ public class MurderMystery extends JavaPlugin implements MurderMysteryAPI {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
-        /* put the game stuff first  */
-        this.gamePlayerHandler = new GamePlayerHandler();
-        this.game = new Game(this);
 
         registerCommands();
         registerListeners();
+
+        this.gamePlayerHandler = new GamePlayerHandler();
+        this.game = new Game(this);
+
     }
 
     private void registerCommands() {
@@ -32,6 +33,10 @@ public class MurderMystery extends JavaPlugin implements MurderMysteryAPI {
 
     private void registerListeners() {
 
+    }
+
+    public GamePlayerHandler getGamePlayerHandler() {
+        return gamePlayerHandler;
     }
 
     @Override
@@ -49,7 +54,4 @@ public class MurderMystery extends JavaPlugin implements MurderMysteryAPI {
         return getGamePlayerHandler().getGamePlayer(uuid);
     }
 
-    public GamePlayerHandler getGamePlayerHandler() {
-        return gamePlayerHandler;
-    }
 }

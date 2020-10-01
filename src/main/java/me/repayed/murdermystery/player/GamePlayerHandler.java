@@ -13,9 +13,24 @@ public class GamePlayerHandler {
         this.gamePlayerSet = new HashSet<>();
     }
 
-    public Optional<GamePlayer> getGamePlayer(UUID uuid) {
-        return null;
+    public void addGamePlayer(GamePlayer gamePlayer) {
+        this.gamePlayerSet.add(gamePlayer);
     }
+
+    public Optional<GamePlayer> getGamePlayer(UUID uuid) {
+        return this.gamePlayerSet.stream()
+                .filter(gamePlayer -> gamePlayer.getUuid().equals(uuid))
+                .findAny();
+    }
+
+    private void removePlayer(UUID uuid) {
+        this.gamePlayerSet.removeIf(player -> player.getUuid().equals(uuid));
+    }
+
+    public void removePlayer(GamePlayer gamePlayer) {
+        removePlayer(gamePlayer.getUuid());
+    }
+
 
     public Set<GamePlayer> getGamePlayerSet() {
         return this.gamePlayerSet;

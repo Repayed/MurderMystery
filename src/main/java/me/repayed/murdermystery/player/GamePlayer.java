@@ -40,4 +40,9 @@ public class GamePlayer {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    @Override
+    public String toString() {
+        return this.uuid.toString();
+    }
 }
