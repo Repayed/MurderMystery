@@ -15,11 +15,11 @@ permissions:
 messages:
   prefix: "&4&lMurder&c&lMystery &8┃"
   no-permission: "%prefix% &fYou don't have the required permission for this command."
-  default-admin:
+  admin:
     set-lobby-location: "%prefix% &fYou have set the &b&lLOBBY SPAWN LOCATION&f."
     set-game-location: "%prefix% &fYou have set the &a&lGAME SPAWN LOCATION&f."
-    force-started-game: "%prefix% &a%starter%&f manually started the game."
-    force-ended-game: "%prefix% &c%ender%&f manually ended the game."
+    force-started-game: "%prefix% &a%starter%&f force-started the game."
+    force-ended-game: "%prefix% &c%ender%&f force-ended the game."
     command-menu:
       - ""
       - " &4&lMurder&c&lMystery &f(Developer -> Repayed#6257)"
@@ -35,6 +35,6 @@ messages:
     not-enough-players: "%prefix% &cThere aren't enough players to start the game."
     player-murdered: " &8-> &c&lNEW BODY! &7A new body has been seen by the cameras."
   connection:
-    player-joined: "%prefix% &c%player% &fjoined the game. &c[%current-player-count%/%max-player-count%]"
+    player-connected: "%prefix% &c%player% &fjoined the game. &c[%current-player-count%/%max-player-count%]"
     played-disconnected: "%prefix% &c%player% &fhas left the game. &c[%current-player-count%/%max-player-count%]"
 

@@ -20,10 +20,12 @@ public class Game {
     public Game(MurderMystery murderMystery) {
         this.murderMystery = murderMystery;
         this.gamePlayerHandler = this.murderMystery.getGamePlayerHandler();
+
+        this.gameState = GameState.WAITING;
     }
 
     public boolean shouldGameStart() {
-        return gamePlayerHandler.getGamePlayerSet().size() >= MINIMUM_START_PLAYER_COUNT;
+        return gameState == GameState.WAITING && gamePlayerHandler.getGamePlayerSet().size() >= MINIMUM_START_PLAYER_COUNT;
     }
 
     public void startGameCountdown() {

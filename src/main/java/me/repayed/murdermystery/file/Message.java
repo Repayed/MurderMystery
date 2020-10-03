@@ -2,25 +2,22 @@ package me.repayed.murdermystery.file;
 
 public enum Message {
 
-    // TODO: everything
-
     PREFIX("messages.prefix"),
-
     NO_PERMISSION("messages.no-permission"),
 
-    SET_LOBBY_LOCATION("messages."),
-    SET_GAME_LOCATION("messages."),
+    SET_LOBBY_LOCATION("messages.admin.set-lobby-location"),
+    SET_GAME_LOCATION("messages.admin.set-game-location"),
+    FORCE_START_GAME("messages.admin.force-started-game"),
+    FORCE_END_GAME("messages.admin.force-ended-game"),
+    COMMAND_MENU("messages.admin.command-menu"),
 
-    FORCE_START_GAME("messages."),
-    FORCE_END_GAME("messages."),
+    GAME_STARTED("messages.game.game-started"),
+    GAME_ENDED("messages.game.game-ended"),
+    NOT_ENOUGH_PLAYERS("messages.game.not-enough-players"),
+    PLAYER_MURDERED("messages.game.player-murdered"),
 
-    COMMAND_MENU("messages."),
-
-    GAME_STARTED("messages."),
-    GAME_ENDED("messages."),
-
-    NOT_ENOUGH_PLAYERS("messages."),
-    PLAYER_MURDERED("messages.");
+    PLAYER_CONNECTED("messages.connection.player-connected"),
+    PLAYER_DISCONNECTED("messages.connection.player-disconnected");
 
     private String path;
 
